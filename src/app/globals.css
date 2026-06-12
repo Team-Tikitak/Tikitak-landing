@@ -1,0 +1,95 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-brand: #38bdf8; /* main / 하늘 */
+  --color-brand-dark: #0680b6; /* main-002 */
+  --color-brand-light: #ebf8fe; /* main-000 */
+  --color-ink: #1f2937; /* 텍스트 기본 */
+
+  /* 캐릭터·포인트 컬러 */
+  --color-spark: #ff7a00; /* 탁스파크 오렌지 */
+  --color-care: #ff5ca8; /* 탁케어 핑크 */
+  --color-leader: #ffd93d; /* 노랑 */
+  --color-builder: #6ee7b7; /* 민트 */
+  --color-burner: #ff4d4d; /* 레드 */
+
+  --font-sans: 'SUIT', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-18px) scale(1.04);
+  }
+}
+
+.animate-float {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-nudge {
+  animation: nudge 1.6s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  45% {
+    transform: rotate(6deg);
+  }
+  70% {
+    transform: rotate(-4deg);
+  }
+  85% {
+    transform: rotate(2deg);
+  }
+}
+
+.char-card:hover .char-img {
+  animation: wiggle 0.6s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-float,
+  .animate-nudge {
+    animation: none;
+  }
+  .char-card:hover .char-img {
+    animation: none;
+  }
+}
