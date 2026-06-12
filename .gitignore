@@ -1,0 +1,69 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*storybook.log
+
+# Dependencies and build output
+node_modules
+.next
+out
+build
+dist
+dist-ssr
+*.tsbuildinfo
+next-env.d.ts
+.react-router
+storybook-static
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.development.local
+.env.test.local
+.env.production.local
+.env.pr-inline-review
+*.local
+
+# Yarn
+.yarn/cache
+.yarn/install-state.gz
+!.yarn/releases
+
+# Vercel
+.vercel
+
+# Playwright
+playwright-report/
+test-results/
+playwright/.cache/
+blob-report/
+
+# Capacitor assets PWA output
+icons/
+
+# AI
+tmp/
+CLAUDE.md
+AGENTS.md
+.claude/
+.omc/
+.omx/
+.codex/
