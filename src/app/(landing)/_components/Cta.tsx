@@ -16,9 +16,7 @@ export function Cta() {
           <h2 className="text-3xl font-extrabold">지금, 우리 팀의 첫 기록</h2>
         </Reveal>
         <Reveal delay={80}>
-          <p className="mt-3 text-white/80">
-            QR을 스캔하면 폰에서 바로 시작할 수 있어요. Android 앱은 준비 중이에요.
-          </p>
+          <p className="mt-3 text-white/80">QR을 스캔하면 앱을 다운로드할 수 있어요.</p>
         </Reveal>
         <Reveal delay={160} from="scale">
           <div className="mt-8 rounded-3xl bg-white p-5 shadow-lg">
@@ -31,8 +29,8 @@ export function Cta() {
           </div>
         </Reveal>
         <Reveal delay={240}>
-          <Button href={SITE.webAppUrl} variant="white" className="mt-10">
-            시작하기
+          <Button href="/download/" variant="white" className="mt-10">
+            다운로드
           </Button>
         </Reveal>
       </div>
