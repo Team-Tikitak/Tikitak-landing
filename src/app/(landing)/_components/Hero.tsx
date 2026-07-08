@@ -56,9 +56,9 @@ export function Hero() {
         <Reveal delay={240}>
           <div className="mt-10 flex flex-col items-center gap-3">
             <Button href={SITE.webAppUrl} className="w-full sm:w-auto">
-              웹에서 시작하기
+              시작하기
             </Button>
-            <p className="text-sm text-gray-400">iOS·Android 앱은 준비 중이에요</p>
+            <p className="text-sm text-gray-400">Android 앱은 준비 중이에요</p>
           </div>
         </Reveal>
       </div>

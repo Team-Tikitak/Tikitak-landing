@@ -17,7 +17,7 @@ export function Cta() {
         </Reveal>
         <Reveal delay={80}>
           <p className="mt-3 text-white/80">
-            QR을 스캔하면 폰에서 바로 시작할 수 있어요. 앱은 준비 중이에요.
+            QR을 스캔하면 폰에서 바로 시작할 수 있어요. Android 앱은 준비 중이에요.
           </p>
         </Reveal>
         <Reveal delay={160} from="scale">
@@ -32,7 +32,7 @@ export function Cta() {
         </Reveal>
         <Reveal delay={240}>
           <Button href={SITE.webAppUrl} variant="white" className="mt-10">
-            웹에서 시작하기
+            시작하기
           </Button>
         </Reveal>
       </div>
