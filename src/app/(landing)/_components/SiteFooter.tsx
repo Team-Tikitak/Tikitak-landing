@@ -5,6 +5,14 @@ export function SiteFooter() {
     <footer className="mx-auto max-w-3xl px-6 py-12 text-center text-sm text-gray-400">
       <nav className="mb-3 flex justify-center gap-5">
         <a
+          href={SITE.termsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-brand transition"
+        >
+          이용약관
+        </a>
+        <a
           href={SITE.privacyUrl}
           target="_blank"
           rel="noopener noreferrer"

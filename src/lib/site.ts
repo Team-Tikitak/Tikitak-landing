@@ -9,5 +9,6 @@ export const SITE = {
   playStoreUrl: '',
   ogImage: '/og.png',
   privacyUrl: 'https://tiki-tak-2026.notion.site/35da5a553281802d9d38f7d07b92b86a',
+  termsUrl: 'https://tiki-tak-2026.notion.site/35da5a553281806b842ecda891104127',
   customerSupport: 'https://open.kakao.com/o/syl9qRvi',
 } as const;
