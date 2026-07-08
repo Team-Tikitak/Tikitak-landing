@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import { Button } from '@/components/Button';
 import { useScrolled } from '@/hooks/useScrolled';
 import { cn } from '@/lib/cn';
@@ -8,6 +9,13 @@ import { SITE } from '@/lib/site';
 
 export function Header() {
   const scrolled = useScrolled(8);
+
+  // 히어로(min-h-svh)를 지나 스크롤했을 때만 CTA 노출 — 모바일마다 뷰포트 높이가 달라 고정 픽셀 대신 실측값 사용
+  const [ctaThreshold, setCtaThreshold] = useState(600);
+  useEffect(() => {
+    setCtaThreshold(window.innerHeight * 0.8);
+  }, []);
+  const showCta = useScrolled(ctaThreshold);
 
   return (
     <header
@@ -29,7 +37,16 @@ export function Header() {
             className="h-[26px] w-auto"
           />
         </a>
-        <Button href={SITE.webAppUrl} size="sm" className="hover:shadow-lg">
+        <Button
+          href={SITE.webAppUrl}
+          size="sm"
+          className={cn(
+            'transition-all duration-300 hover:shadow-lg',
+            showCta
+              ? 'translate-y-0 opacity-100'
+              : 'pointer-events-none -translate-y-1 opacity-0',
+          )}
+        >
           시작하기
         </Button>
       </div>
