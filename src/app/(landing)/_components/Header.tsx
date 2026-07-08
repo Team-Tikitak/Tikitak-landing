@@ -42,9 +42,7 @@ export function Header() {
           size="sm"
           className={cn(
             'transition-all duration-300 hover:shadow-lg',
-            showCta
-              ? 'translate-y-0 opacity-100'
-              : 'pointer-events-none -translate-y-1 opacity-0',
+            showCta ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-1 opacity-0',
           )}
         >
           시작하기
