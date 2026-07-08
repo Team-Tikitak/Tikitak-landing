@@ -6,7 +6,7 @@ import { SITE } from '@/lib/site';
 export function DownloadRedirect() {
   useEffect(() => {
     const ua = navigator.userAgent;
-    let target = SITE.webAppUrl;
+    let target: string = SITE.webAppUrl;
 
     if (/android/i.test(ua)) {
       target = SITE.playStoreUrl || SITE.webAppUrl;
