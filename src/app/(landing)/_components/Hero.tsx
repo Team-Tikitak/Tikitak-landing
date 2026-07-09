@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { Button } from '@/components/Button';
 import { Reveal } from '@/components/Reveal';
-import { SITE } from '@/lib/site';
 import { HERO_STICKERS } from '../_constants';
 import { ScrollIndicator } from './ScrollIndicator';
 
@@ -55,7 +54,7 @@ export function Hero() {
 
         <Reveal delay={240}>
           <div className="mt-10 flex flex-col items-center gap-3">
-            <Button href={SITE.webAppUrl} className="w-full sm:w-auto">
+            <Button href="/download/" className="w-full sm:w-auto">
               시작하기
             </Button>
             <p className="text-sm text-gray-400">Android 앱은 준비 중이에요</p>
